@@ -13,6 +13,7 @@ to generate this file without the comments in this block.
 { name = "nanoid"
 , dependencies = [ "effect", "prelude", "yoga-json" ]
 , license = "MIT"
+, repository = "https://github.com/rowtype-yoga/purescript-nanoid"
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs" ]
 }
