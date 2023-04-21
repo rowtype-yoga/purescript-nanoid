@@ -1,0 +1,21 @@
+{
+    "name": "purescript-nanoid",
+    "license": [
+        "MIT"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rowtype-yoga/purescript-nanoid"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "output"
+    ],
+    "dependencies": {
+        "purescript-effect": "^v4.0.0",
+        "purescript-prelude": "^v6.0.1",
+        "purescript-yoga-json": "https://github.com/rowtype-yoga/purescript-yoga-json.git#v5.1.0"
+    }
+}
