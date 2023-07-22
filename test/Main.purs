@@ -27,8 +27,7 @@ main = do
   when (String.length shorterId /= 8) (throw "NanoID length is not 8")
 
   -- Test custom alphabets
-  let newCustomNanoID = customNanoID base58 21
-  NanoID customId <- newCustomNanoID
+  NanoID customId <- newBase58NanoID
   log $ "Generated custom id " <> customId
   when (String.length customId /= 21) (throw "NanoID length is not 21")
 
@@ -40,6 +39,12 @@ main = do
   when (String.length repl /= 0) (throw "String contains invalid characters")
 
   pure unit
+
+newBase58NanoID :: Effect NanoID
+newBase58NanoID = customNanoID base58 21
+
+newCustomNanoID :: Effect NanoID
+newCustomNanoID = customNanoID (CustomAlphabet "abc123") 21
 
 unsafeRight :: forall err a. Either err a -> a
 unsafeRight (Right a) = a
