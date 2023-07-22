@@ -11,9 +11,19 @@ When creating a new Spago project, you can use
 to generate this file without the comments in this block.
 -}
 { name = "nanoid"
-, dependencies = [ "effect", "prelude", "yoga-json" ]
+, dependencies =
+  [ "console"
+  , "effect"
+  , "either"
+  , "exceptions"
+  , "newtype"
+  , "prelude"
+  , "strings"
+  , "unsafe-coerce"
+  , "yoga-json"
+  ]
 , license = "MIT"
 , repository = "https://github.com/rowtype-yoga/purescript-nanoid"
 , packages = ./packages.dhall
-, sources = [ "src/**/*.purs" ]
+, sources = [ "src/**/*.purs", "test/**/*.purs" ]
 }
